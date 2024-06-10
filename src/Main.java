@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class Main implements Menu {
-    //Adicione try catch para index out of bounds Exc
 
     static Moeda dolar = new DolarUSD();
 

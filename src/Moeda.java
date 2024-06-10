@@ -1,6 +1,6 @@
 abstract public class Moeda {
 
-    double valor;
+    protected double valor;
 
     public void info() {
 
