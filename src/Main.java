@@ -1,3 +1,6 @@
+import javax.swing.*;
+import javax.swing.border.Border;
+import java.awt.*;
 import java.util.Scanner;
 
 public class Main implements Menu {
@@ -60,6 +63,26 @@ public class Main implements Menu {
     }
 
     public static void main(String[] args) {
+        Border border = BorderFactory.createLineBorder(Color.black,3,true);
+
+        JLabel label = new JLabel();
+        label.setText("COFRINHO DE MOEDAS");
+        ImageIcon image = new ImageIcon("src/logo.png");
+        label.setIcon(image);
+        label.setHorizontalTextPosition(JLabel.CENTER);
+        label.setVerticalTextPosition(JLabel.BOTTOM);
+        label.setForeground(Color.black);
+        label.setFont(new Font("Arial Black",Font.BOLD,60));
+        label.setIconTextGap(25);
+        label.setBackground(Color.gray);
+        label.setOpaque(true);
+        label.setBorder(border);
+        label.setVerticalAlignment(JLabel.TOP);
+        label.setHorizontalAlignment(JLabel.CENTER);
+
+        GUIFrame frame = new GUIFrame();
+        frame.add(label);
+
         Scanner teclado = new Scanner(System.in);
 
         int opcao = -1;
@@ -100,5 +123,6 @@ public class Main implements Menu {
             }
         }
         System.out.println("========== FIM DO PROGRAMA ==========");
+        System.out.println("Feche a janela para sair");
     }
 }
